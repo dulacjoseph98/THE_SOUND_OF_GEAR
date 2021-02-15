@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.search-bar{
+  width: 70vw;
+}
+
+.home-container {
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 120px);
+}

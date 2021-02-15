@@ -1,0 +1,16 @@
+.footer {
+  justify-content: space-between;
+  background: #333333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 20px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+}
+
