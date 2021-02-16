@@ -1,1 +1,99 @@
 // Specific CSS for your home-page
+
+body#pages-home{
+  background-image: image-url("test.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+#pages-home .navbar {
+    background: transparent;
+}
+
+.search-bar{
+  display: inline-flex;
+  background-color: white;
+  width: 35%;
+  border-radius: 24px;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid white;
+  justify-content: space-between;
+}
+
+button {
+  background: transparent;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: none;
+  font-family: "Circular Medium";
+}
+
+.address {
+  background: transparent;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: "Circular Medium";
+}
+
+.start-date {
+  background: transparent;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: "Circular Medium";
+}
+
+.end-date {
+  background: transparent;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: "Circular Medium";
+}
+
+i {
+  justify-content: end;
+}
+
+button :hover {
+
+}
+
+span {
+  width: 1px;
+  height: 24px;
+  background: rgba( 0, 0, 0, 0.18);
+}
+
+// ul {
+//     display: flex;
+//     justify-content: space-around;
+//     list-style: none;
+//     margin: auto;
+// }
+
+// li {
+//   justify-content: space-between;
+//   padding: 15px 50px 15px 50px;
+// }
+
+#pages-home .custom-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+  justify-content: center;
+  align-items: center;
+}
+
