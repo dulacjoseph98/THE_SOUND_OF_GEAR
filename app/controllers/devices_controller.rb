@@ -1,9 +1,16 @@
 class DevicesController < ApplicationController
   def index
-    if params[:location].present?
-      @devices = Device.where('lower(location) = ?', params[:location].downcase)
+    if params[:query].present?
+      if params[:query][:address] != "" && params[:query][:category] != ""
+        @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase).where('lower(category) = ?', params[:query][:category].downcase)
+      elsif params[:query][:address] != ""
+        @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase)
+      elsif params[:query][:category] != ""
+        @devices = policy_scope(Device).where('lower(category) = ?', params[:query][:category].downcase)
+      end
+      # @devices = Device.where('lower(location) = ?', params[:location].downcase)
     else
-      @devices = Device.all
+      @devices = policy_scope(Device)
     end
   end
 

@@ -1,7 +1,7 @@
 <h3 id="rent">Rent your musical devices locally</h3>
 
 <div class="search-bar">
-  <%= form_for :devices, url: devices_path, method: :get do |f| %>
+  <%= form_for :query, url: devices_path, method: :get do |f| %>
     <%= f.text_field :address, placeholder: "Address" %>
     <span></span>
     <%= f.text_field :category, placeholder: "Categories"%>
@@ -9,8 +9,5 @@
     <%= f.button :submit, {class: "search-icon" } do %><i class="fas fa-search-location"></i><% end %>
   <% end %>
 </div>
-
-
-
 
   <%# <p class="btn btn-success">Find a product in the area</p> %>
