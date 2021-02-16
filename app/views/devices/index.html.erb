@@ -1,9 +1,15 @@
 <div class="container">
-  <h1>All the Devices</h1>
-  <ul class= "flexy"><% @devices.each do |device| %>
-   <li><%= link_to device.name, device_path(device) %></li>
-   <% end %>
-  </ul>
-  <%= link_to "Add a device", new_device_path, class: 'btn btn-primary' %>
-  <%= link_to "Add a reservation", new_reservation_path, class: 'btn btn-primary' %>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>All the Devices</h1>
+      <ul class= "flexy"><% @devices.each do |device| %>
+       <li><%= link_to device.name, device_path(device) %></li>
+       <% end %>
+      </ul>
+      <% if policy(Device).create? %>
+        <%= link_to "Add a device", new_device_path, class: 'btn btn-primary' %>
+      <% end %>
+      <%= link_to "Add a reservation", new_reservation_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
 </div>
