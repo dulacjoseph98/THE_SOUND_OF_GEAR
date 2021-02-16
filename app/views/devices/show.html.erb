@@ -5,6 +5,10 @@
         <h1><%= @device.name %></h2>
         <p><%= @device.name %></p>
         <hr>
+        <% if @device.photo.attached? %>
+          <%= cl_image_tag @device.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
+        <hr>
         <%= link_to 'Back', devices_path, class: "btn btn-primary" %> |
         <% if policy(@device).destroy? %>
           <%= link_to "Remove",
