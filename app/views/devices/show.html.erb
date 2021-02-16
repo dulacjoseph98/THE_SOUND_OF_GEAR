@@ -6,6 +6,12 @@
         <p><%= @device.name %></p>
         <hr>
         <%= link_to 'Back', devices_path, class: "btn btn-primary" %> |
+        <% if policy(@device).destroy? %>
+          <%= link_to "Remove",
+                    device_path(@device),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
+        <% end %>
         <hr>
       <% end %>
     </div>
