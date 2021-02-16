@@ -19,7 +19,8 @@ body#pages-home{
   overflow: hidden;
   align-items: center;
   border: 1px solid white;
-
+  min-width: 490px;
+  margin-bottom: 5%;
   form {
     width: 100%;
     display: flex;
@@ -67,6 +68,7 @@ body#pages-home{
 h3#rent {
 color: white;
 font-family: 'Sansita Swashed', cursive;
+padding-bottom: 30px;
 }
 
 
