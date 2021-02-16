@@ -21,6 +21,12 @@ class DevicesController < ApplicationController
     @device = Device.find(params[:id])
     authorize @device
   end
+  def destroy
+    @device = Device.find(params[:id])
+    @device.destroy
+    authorize @device
+    redirect_to devices_path(@device)
+  end
 
 private
 
