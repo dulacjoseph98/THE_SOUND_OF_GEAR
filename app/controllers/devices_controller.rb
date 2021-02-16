@@ -1,11 +1,24 @@
 class DevicesController < ApplicationController
   def index
-    @devices = policy_scope(Device).order(created_at: :desc)
+    if params[:query].present?
+      if params[:query][:address] != "" && params[:query][:category] != ""
+        @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase).where('lower(category) = ?', params[:query][:category].downcase)
+      elsif params[:query][:address] != ""
+        @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase)
+      elsif params[:query][:category] != ""
+        @devices = policy_scope(Device).where('lower(category) = ?', params[:query][:category].downcase)
+      end
+      # @devices = Device.where('lower(location) = ?', params[:location].downcase)
+    else
+      @devices = policy_scope(Device)
+    end
   end
+
   def new
     @device = Device.new
     authorize @device
   end
+
   def create
     @device = Device.new(device_params)
     @user = current_user
@@ -17,6 +30,7 @@ class DevicesController < ApplicationController
       render :new
     end
   end
+
   def show
     @device = Device.find(params[:id])
     authorize @device
