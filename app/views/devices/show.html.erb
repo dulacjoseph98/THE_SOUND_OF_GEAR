@@ -1,11 +1,19 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1><%= @device.name %></h2>
-      <p><%= @device.name %></p>
-      <hr>
-      <%= link_to 'Back', devices_path, class: "btn btn-primary" %> |
-      <hr>
+      <% if policy(Device).create? %>
+        <h1><%= @device.name %></h2>
+        <p><%= @device.name %></p>
+        <hr>
+        <%= link_to 'Back', devices_path, class: "btn btn-primary" %> |
+        <% if policy(@device).destroy? %>
+          <%= link_to "Remove",
+                    device_path(@device),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
+        <% end %>
+        <hr>
+      <% end %>
     </div>
   </div>
 </div>

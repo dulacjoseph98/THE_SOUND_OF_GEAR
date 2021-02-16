@@ -12,56 +12,83 @@ body#pages-home{
 }
 
 .search-bar{
-  display: inline-flex;
+  display: flex;
   background-color: white;
   width: 35%;
   border-radius: 24px;
   overflow: hidden;
   align-items: center;
   border: 1px solid white;
-  justify-content: space-between;
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    input {
+      background: transparent;
+      height: 48px;
+      padding: 0 16px;
+      align-items: center;
+      border: none;
+      flex-grow: 1;
+      border-radius: 24px;
+
+      &:focus,
+      &:hover {
+        outline: 0;
+        background: #f3f3f3;
+        + span {
+          opacity: 0;
+        }
+      }
+    }
+
+    button.search-icon:hover {
+      border-radius: 50%;
+      background: black;
+
+      i {
+        color: white;
+      } 
+    }
+  }
 }
 
-button {
+.search-icon {
   background: transparent;
   height: 48px;
   padding: 0 16px;
-  display: flex;
   align-items: center;
   justify-content: end;
   border: none;
   font-family: "Circular Medium";
 }
 
-.address {
-  background: transparent;
-  height: 48px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  border: none;
-  font-family: "Circular Medium";
+h3#rent {
+color: white;
+font-family: 'Sansita Swashed', cursive;
 }
 
-.start-date {
-  background: transparent;
-  height: 48px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  border: none;
-  font-family: "Circular Medium";
-}
 
-.end-date {
-  background: transparent;
-  height: 48px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  border: none;
-  font-family: "Circular Medium";
-}
+// .start-date {
+//   background: transparent;
+//   height: 48px;
+//   padding: 0 16px;
+//   display: flex;
+//   align-items: center;
+//   border: none;
+//   font-family: "Circular Medium";
+// }
+
+// .end-date {
+//   background: transparent;
+//   height: 48px;
+//   padding: 0 16px;
+//   display: flex;
+//   align-items: center;
+//   border: none;
+//   font-family: "Circular Medium";
+// }
 
 i {
   justify-content: end;
