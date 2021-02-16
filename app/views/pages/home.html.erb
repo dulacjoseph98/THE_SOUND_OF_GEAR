@@ -1,27 +1,20 @@
-<form class="search-bar">
-    <%= text_field_tag 'address', nil, class: "address", :placeholder => "Address"%>
-    <span></span>
-    <%= date_field_tag 'start', nil, class: "start-date" %>
-    <span></span>
-    <%= date_field_tag 'end', nil, class: "end-date" %>
-    <span></span>
-    <%=  %>
-    <%# <button>
-      <div class="search_icon">
-        <i class="fas fa-search-location"></i>
-      </div>
-    </button> %>
-</form>
 
-<%= simple_form_for(@devices) do |f| %>
-  <%= f.input :address, placeholder: "address" %>
-  <%= f.input : %>
-  <%= f.input  %>
-<% end %>
+<h3 id="rent">Rent your musical devices locally</h3>
+
+<div class="search-bar">
+  <%= form_for :devices, url: devices_path, method: :get do |f| %>
+    <%= f.text_field :address, placeholder: "Address" %>
+    <span></span>
+    <%= f.text_field :category, placeholder: "Categories"%>
+    <span></span>
+    <%= f.button :submit, {class: "search-icon" } do %><i class="fas fa-search-location"></i><% end %>
+  <% end %>
+</div>
+
   
 
-  <h3>Rent your musical devices locally</h3>
-  <p class="btn btn-success">Find a product in the area</p>
+  
+  <%# <p class="btn btn-success">Find a product in the area</p> %>
 
 
 
