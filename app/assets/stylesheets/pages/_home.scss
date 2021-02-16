@@ -12,7 +12,7 @@ body#pages-home{
 }
 
 .search-bar{
-  display: inline-flex;
+  display: flex;
   background-color: white;
   width: 35%;
   border-radius: 24px;
@@ -33,7 +33,7 @@ button {
   font-family: "Circular Medium";
 }
 
-.address {
+.Address {
   background: transparent;
   height: 48px;
   padding: 0 16px;
