@@ -4,7 +4,10 @@
     <h1>Add a device</h1>
       <%= simple_form_for(@device) do |f| %>
       <%= f.input :name %>
-      <%= f.input :category %>
+      <%= p "category :" %>
+      <%= f.select :category, ['option1', 'option2']%>
+      <br>
+      <br>
       <%= f.submit class: "btn btn-primary" %> | <%= link_to 'Back', devices_path, class: "btn btn-primary" %>
     <% end %>
     </div>
