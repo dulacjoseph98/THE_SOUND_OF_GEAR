@@ -1,5 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<%= date_field_tag 'name', nil, class: "truc" %>
-<%= text_field_tag 'address', nil, class: "address" %>
+<form class="search-bar">
+    <%= text_field_tag 'address', nil, class: "address", :placeholder => "Address"%>
+    <span></span>
+    <%= date_field_tag 'start', nil, class: "start-date" %>
+    <span></span>
+    <%= date_field_tag 'end', nil, class: "end-date" %>
+    <span></span>
+    <%=  %>
+    <%# <button>
+      <div class="search_icon">
+        <i class="fas fa-search-location"></i>
+      </div>
+    </button> %>
+</form>
+
+<%= simple_form_for(@devices) do |f| %>
+  <%= f.input :address, placeholder: "address" %>
+  <%#= f.input : %>
+  <%= f.input  %>
+<% end %>
+
+
+  <h3>Rent your musical devices locally</h3>
+  <p class="btn btn-success">Find a product in the area</p>
+
