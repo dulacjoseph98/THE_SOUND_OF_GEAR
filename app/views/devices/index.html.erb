@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>All the Devices</h1>
+  <ul class= "flexy"><% @devices.each do |device| %>
+   <li><%= link_to device.name, device_path(device) %></li>
+   <% end %>
+  </ul>
+  <%= link_to "Add a device", new_device_path, class: 'btn btn-primary' %>
+</div>
