@@ -124,14 +124,10 @@ GEM
     mime-types-data (3.2021.0212)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
-    mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.5)
-    nokogiri (1.11.1)
-      mini_portile2 (~> 2.5.0)
-      racc (~> 1.4)
     nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -256,7 +252,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
   x86_64-darwin-18
 
 DEPENDENCIES
@@ -291,4 +286,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.4
+   2.2.9
