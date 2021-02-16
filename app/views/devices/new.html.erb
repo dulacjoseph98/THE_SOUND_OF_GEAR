@@ -4,6 +4,7 @@
     <h1>Add a device</h1>
       <%= simple_form_for(@device) do |f| %>
       <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <%= p "category :" %>
       <%= f.select :category, ['option1', 'option2']%>
       <br>
