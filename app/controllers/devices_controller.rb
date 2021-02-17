@@ -12,6 +12,13 @@ class DevicesController < ApplicationController
     else
       @devices = policy_scope(Device)
     end
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @devices.geocoded.map do |device|
+      {
+        lat: device.latitude,
+        lng: device.longitude
+      }
+    end
   end
 
   def new
@@ -42,9 +49,9 @@ class DevicesController < ApplicationController
     redirect_to devices_path(@device)
   end
 
-private
+  private
 
   def device_params
-    params.require(:device).permit(:name, :category, :photo)
+    params.require(:device).permit(:name, :category, :photo, :address)
   end
 end
