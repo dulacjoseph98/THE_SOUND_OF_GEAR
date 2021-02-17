@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 Device.destroy_all
 User.destroy_all
 
@@ -18,11 +20,27 @@ nasser = User.new(name: "Nasser", password: "123456", email: "nasser@lewagon.org
 nasser.save!
 
 
-apollo = Device.new(name: "Apollo Twin", category: "carte son", location: "Paris", user: guillaume)
-apollo.save!
 
-neumann = Device.new(name: "U87", category: "microphone", location: "Paris", user: gabriel)
-neumann.save!
+users = [guillaume, gabriel, nasser]
 
-moog = Device.new(name: "Moog Voyager", category: "synthétiseur", location: "Marseille", user: nasser)
-moog.save!
+speakers_devices = ["Yamaha HS7", "Focal Twin 6", "Genelec 8030 CP"]
+5.times do
+  Device.create!(user: users.sample, name: speakers_devices.sample, category: "speakers", location: Faker::Address.full_address)
+end
+
+synthetiseur_devices = ["Moog Voyager", "Roland Jupiter X", "Behringer Poly D"]
+5.times do
+  Device.create!(user: users.sample, name: synthetiseur_devices.sample, category: "synthetiseur", location: Faker::Address.full_address)
+end
+
+soundcard_devices = ["Apollo Twin", "Focusrite Scarlett", "Antelop Zen Go"]
+5.times do
+  Device.create!(user: users.sample, name: soundcard_devices.sample, category: "carte son", location: Faker::Address.full_address)
+end
+
+microphone_devices = ["Neumann U87", "Neumann KM184", "Beyer M88 TG"]
+5.times do
+  Device.create!(user: users.sample, name: microphone_devices.sample, category: "microphone", location: Faker::Address.full_address)
+end
+
+

@@ -1,6 +1,6 @@
 class DevicesController < ApplicationController
   def index
-    if params[:query].present?
+    if params[:query].present? && (params[:query][:address] != "" || params[:query][:category] != "")
       if params[:query][:address] != "" && params[:query][:category] != ""
         @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase).where('lower(category) = ?', params[:query][:category].downcase)
       elsif params[:query][:address] != ""
