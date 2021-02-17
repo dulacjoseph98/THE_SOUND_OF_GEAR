@@ -1,4 +1,5 @@
 class DevicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     if params[:query].present?
       if params[:query][:address] != "" && params[:query][:category] != ""
