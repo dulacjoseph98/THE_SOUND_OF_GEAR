@@ -14,7 +14,7 @@
   margin: 7%;
 }
 .cards {
-  height: 100%;
+  max-height: calc(100vh - 170px);
   overflow-y: scroll;
   
 }
@@ -27,6 +27,7 @@
 
 .devices {
   height: 100%;
+  
 }
 
 #map {
