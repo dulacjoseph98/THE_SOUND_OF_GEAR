@@ -3,7 +3,7 @@
     <div class="col-6">
       <% if policy(Device).create? %>
         <h1><%= @device.name %></h2>
-        <p><%= @device.name %></p>
+        <p><%= @device.address %></p>
         <hr>
         <% if @device.photo.attached? %>
           <%= cl_image_tag @device.photo.key, height: 300, width: 400, crop: :fill %>
