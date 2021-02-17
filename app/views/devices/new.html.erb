@@ -5,7 +5,9 @@
       <%= simple_form_for(@device) do |f| %>
       <%= f.input :name %>
       <%= p "category :" %>
+      <div class="dropdown1">
       <%= f.select :category, ['option1', 'option2']%>
+      </div>
       <br>
       <br>
       <%= f.submit class: "btn btn-primary" %> | <%= link_to 'Back', devices_path, class: "btn btn-primary" %>
