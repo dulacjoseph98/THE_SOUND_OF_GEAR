@@ -3,11 +3,11 @@
     <div class="col-6">
     <h1>Add a device</h1>
       <%= simple_form_for(@device) do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name, label: "Device name :" %>
       <%= f.input :address %>
       <%= f.input :photo, as: :file %>
-      <%= p "category :" %>
-      <%= f.select :category, ['option1', 'option2']%>
+      <%= p "Category :" %>
+      <%= f.select :category, ['Choose a category', 'Carte Son', 'Synthetiseur', 'Microphone', 'Speakers']%>
       <br>
       <br>
       <%= f.submit class: "btn btn-primary" %> | <%= link_to 'Back', devices_path, class: "btn btn-primary" %>
