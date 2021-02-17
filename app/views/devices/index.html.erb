@@ -11,7 +11,7 @@
       <% if policy(Device).create? %>
         <%= link_to "Add a device", new_device_path, class: 'btn btn-primary' %>
       <% end %>
-      <%= link_to "Add a reservation", new_reservation_path, class: 'btn btn-primary' %>
+      <%#= link_to "Add a reservation", new_device_reservation_path(device), class: 'btn btn-primary' %>
     </div>
     <div class="col-9">
       <div id="map"
