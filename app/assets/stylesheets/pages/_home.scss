@@ -1,4 +1,7 @@
 // Specific CSS for your home-page
+.container {
+  margin-bottom: 80px;
+}
 
 body#pages-home{
   background-image: image-url("test.jpg");
@@ -50,7 +53,7 @@ body#pages-home{
 
       i {
         color: white;
-      } 
+      }
     }
   }
 }

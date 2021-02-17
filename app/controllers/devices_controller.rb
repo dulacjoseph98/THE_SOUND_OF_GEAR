@@ -17,7 +17,8 @@ class DevicesController < ApplicationController
     @markers = @devices.geocoded.map do |device|
       {
         lat: device.latitude,
-        lng: device.longitude
+        lng: device.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { device: device })
       }
     end
   end
