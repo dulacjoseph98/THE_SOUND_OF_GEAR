@@ -9,8 +9,11 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     authorize @reservation
+    @reservation.user = current_user
+    @device = Device.find(params[:device_id])
+    @reservation.device = @device
     if @reservation.save
-      redirect_to reservation_path(@reservation)
+      redirect_to device_reservation_path(@device, @reservation)
     else
       render :new
     end

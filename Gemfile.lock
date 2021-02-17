@@ -105,6 +105,7 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.14.2)
+    flatpickr (4.6.6.0)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     geocoder (1.6.5)
@@ -274,6 +275,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   faker!
+  flatpickr
   font-awesome-sass
   geocoder
   jbuilder (~> 2.7)
@@ -299,4 +301,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.4
+   2.2.11
