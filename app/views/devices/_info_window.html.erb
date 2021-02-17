@@ -1,0 +1,7 @@
+<h3><%= device.name %></h3>
+
+<p><%= device.address %></p>
+
+<% if device.photo.attached? %>
+  <%= cl_image_tag device.photo.key, height: 80, width: 90, crop: :fill %>
+<% end %>
