@@ -1,6 +1,7 @@
 class DevicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    if params[:query].present?
+    if params[:query].present? && (params[:query][:address] != "" || params[:query][:category] != "")
       if params[:query][:address] != "" && params[:query][:category] != ""
         @devices = policy_scope(Device).where('lower(location) = ?', params[:query][:address].downcase).where('lower(category) = ?', params[:query][:category].downcase)
       elsif params[:query][:address] != ""
@@ -11,6 +12,13 @@ class DevicesController < ApplicationController
       # @devices = Device.where('lower(location) = ?', params[:location].downcase)
     else
       @devices = policy_scope(Device)
+    end
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @devices.geocoded.map do |device|
+      {
+        lat: device.latitude,
+        lng: device.longitude
+      }
     end
   end
 
@@ -42,9 +50,9 @@ class DevicesController < ApplicationController
     redirect_to devices_path(@device)
   end
 
-private
+  private
 
   def device_params
-    params.require(:device).permit(:name, :category, :photo)
+    params.require(:device).permit(:name, :category, :photo, :address)
   end
 end
