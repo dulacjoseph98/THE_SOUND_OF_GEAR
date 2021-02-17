@@ -2,10 +2,12 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <h1>All the Devices</h1>
-      <ul class= "flexy"><% @devices.each do |device| %>
+      <div class="cards">
+      <ul class= "flexy" id="otis"><% @devices.each do |device| %>
        <li><%= link_to device.name, device_path(device) %></li>
        <% end %>
       </ul>
+      </div>
       <% if policy(Device).create? %>
         <%= link_to "Add a device", new_device_path, class: 'btn btn-primary' %>
       <% end %>
