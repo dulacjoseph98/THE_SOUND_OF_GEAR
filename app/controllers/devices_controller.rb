@@ -44,7 +44,11 @@ class DevicesController < ApplicationController
   def show
     @device = Device.find(params[:id])
     authorize @device
+
+    @reservation = Reservation.new
+    # authorize @reservation
   end
+
   def destroy
     @device = Device.find(params[:id])
     @device.destroy
