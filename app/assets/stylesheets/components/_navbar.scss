@@ -10,7 +10,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  height: 75px;
+  height: 60px;
   justify-content: space-between;
 }
 
@@ -42,9 +42,14 @@
   }
 }
 
+.logo {
+  color: white;
+}
+
 .login {
   color: white !important;
   opacity: 0.65;
+  margin-right: 15px;
 }
 
 .login:hover {

@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="logo-title">
     <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.png", class: "logo" %>
+    <%= image_tag "logo1.png", class: "logo" %>
     <% end %>
     <h3 id="gear">The Sound of Gear</h3>
   </div>
@@ -15,14 +15,14 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link login" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Messages", "#", class: "nav-link login" %>
         </li>
         <% if policy(Device).create? %>
           <li>
-            <%= link_to "Add a device", new_device_path, class: 'nav-link' %>
+            <%= link_to "Add a device", new_device_path, class: 'nav-link login' %>
           </li>
         <% end %>
         <li class="nav-item dropdown">
