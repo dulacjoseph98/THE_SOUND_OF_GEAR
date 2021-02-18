@@ -2,28 +2,32 @@
   <div class="devindex">
     <div class="devices">
         <div class="cards">
-          <h1>All the devices</h1>
+          <h1><%= @device_name %></h1>
             <ul class= "flexy" id="otis">
               <% @devices.each do |device| %>
-                <li>
-                  <div id="device_name">
-                    <%= link_to device.name, device_path(device) %>
-                    <br>
-                  </div>
+                <%= link_to device_path(device) do  %>
+                  <li>
+                    <div class="">
+                      <div class="device_name">
+                        <b><%= device.name %></b>
+                        <br>
+                      </div>
 
-                  <div id="device_category">
-                    <%= device.category %>
-                  </div>
+                      <div class="device_category">
+                        <i><%= device.category %></i>
+                      </div>
+                    </div>
 
-                  <div id="device_photo">
-                    <% if device.photo.attached? %>
-                      <%= cl_image_tag device.photo.key, width: 100, height: 100 %>
-                    <% else %>
-                      <%= cl_image_tag 'kh2rnf8lhwhifjnpdvsu7rwz8enp', width: 300, height: 200 %>
-                    <% end %>
-                  </div>
-                </li>
+                    <div class="device_photo">
+                      <% if device.photo.attached? %>
+                        <%= cl_image_tag device.photo.key, width: 200, height: 150, class: "img-fit" %>
+                      <% else %>
+                        <%= cl_image_tag 'kh2rnf8lhwhifjnpdvsu7rwz8enp', width: 200, height: 150, class: "img-fit" %>
+                      <% end %>
+                    </div>
+                  </li>
               <% end %>
+            <% end %>
             </ul>
         </div>
     </div>

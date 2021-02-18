@@ -13,10 +13,10 @@ body#devices-index{
 
 .flexy {
   padding-left: 0px;
+  padding-bottom: 3px;
 }
 
 #otis a {
-  padding-left: 20px;
   color: #333333;
   text-decoration: none;
   a:hover {
@@ -27,7 +27,7 @@ body#devices-index{
 #otis li {
   list-style: none;
   overflow: hidden;
-  height: 120px;
+  height: 150px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -78,6 +78,18 @@ li {
   position: fixed;
   right: 0;
   border-radius: 12px;
+}
+
+.img-fit {
+  object-fit: cover;
+}
+
+.device_category {
+  padding-left: 20px;
+}
+
+.device_name {
+  padding-left: 20px;
 }
 
 

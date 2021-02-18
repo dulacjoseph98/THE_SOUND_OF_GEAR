@@ -2,17 +2,26 @@ class DevicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @devices = policy_scope(Device)
+    @device_name = "All the results for "
 
     if params[:name].present?
       @devices = @devices.global_search(params[:name])
+      @device_name = @device_name + " " + params[:name]
     end
 
     if params[:category].present?
       @devices = @devices.global_search(params[:category])
+      @device_name = @device_name + " " + params[:category]
+
     end
 
     if params[:address].present?
       @devices = @devices.near(params[:address], 10)
+      @device_name = @device_name + " " + params[:address]
+    end
+
+    if @device_name == "All the results for "
+      @device_name = "All the Devices"
     end
 
     @markers = @devices.geocoded.map do |device|
