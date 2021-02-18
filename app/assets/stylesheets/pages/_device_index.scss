@@ -13,25 +13,34 @@
   align-items: center;
   margin: 7%;
 }
+
 .cards {
   max-height: calc(100vh - 170px);
   overflow-y: scroll;
-  
+  h1{
+    padding-left: 80px;
+  }
 }
 
 .devindex {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: calc(100vh - 120px);
+  background-color: lightgrey;
+  margin-bottom: 20px;
 }
 
 .devices {
   height: 100%;
-  
+  width: 50%;
 }
 
 #map {
+  margin-top: 12px;
+  margin-right: 12px;
   min-height: calc(100vh - 120px);
+  border: 1px solid black;
 }
 
 
