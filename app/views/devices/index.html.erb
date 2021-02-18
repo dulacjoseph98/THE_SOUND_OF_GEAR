@@ -1,16 +1,34 @@
 
   <div class="devindex">
     <div class="devices">
-      <div class="cards">
-        <h1>All the Devices</h1>
-          <ul class= "flexy" id="otis"><% @devices.each do |device| %>
-              <li><%= link_to device.name, device_path(device) %></li>
-            <% end %>
-          </ul>
-      </div>
+        <div class="cards">
+          <h1>All the devices</h1>
+            <ul class= "flexy" id="otis">
+              <% @devices.each do |device| %>
+                <li>
+                  <div id="device_name">
+                    <%= link_to device.name, device_path(device) %>
+                    <br>
+                  </div>
+
+                  <div id="device_category">
+                    <%= device.category %>
+                  </div>
+
+                  <div id="device_photo">
+                    <% if device.photo.attached? %>
+                      <%= cl_image_tag device.photo.key, width: 100, height: 100 %>
+                    <% else %>
+                      <%= cl_image_tag 'kh2rnf8lhwhifjnpdvsu7rwz8enp', width: 300, height: 200 %>
+                    <% end %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+        </div>
     </div>
     <div id="map"
-       style="width: 50%; height: 400px;"
+       style="width: 45%; height: 200px;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>

@@ -2,33 +2,68 @@
   justify-items: auto;
 }
 
+body#devices-index{
+  background-color: #3e5c76;
+  // #3b5369d6
+}
+
+.navbar {
+    background: #323233;
+}
+
+.flexy {
+  padding-left: 0px;
+}
+
+#otis a {
+  padding-left: 20px;
+  color: #333333;
+  text-decoration: none;
+  a:hover {
+    color: white;
+  }
+}
 
 #otis li {
   list-style: none;
   overflow: hidden;
   height: 120px;
   background: white;
+  border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 7%;
 }
 
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cards {
-  max-height: calc(100vh - 170px);
-  overflow-y: scroll;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 15px;
+  margin-top: 0;
+  background: white;
   h1{
-    padding-left: 80px;
+    padding-top: 15px;
+    text-align: center;
+    color: #323233;
+    font-family: "Circular Medium";
   }
+  // li {
+  //   border-radius: 12px;
+  // }
+
 }
 
 .devindex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   min-height: calc(100vh - 120px);
-  background-color: lightgrey;
-  margin-bottom: 20px;
+  padding-top: 140px;
 }
 
 .devices {
@@ -37,10 +72,12 @@
 }
 
 #map {
-  margin-top: 12px;
   margin-right: 12px;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 160px);
   border: 1px solid black;
+  position: fixed;
+  right: 0;
+  border-radius: 12px;
 }
 
 

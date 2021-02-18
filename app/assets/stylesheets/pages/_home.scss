@@ -124,7 +124,7 @@ span {
 #pages-home .custom-container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 120px);
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
