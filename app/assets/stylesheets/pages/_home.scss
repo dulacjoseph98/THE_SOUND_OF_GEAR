@@ -4,7 +4,7 @@
 }
 
 body#pages-home{
-  background-image: image-url("test.jpg");
+  background-image: image-url("test3.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -17,7 +17,7 @@ body#pages-home{
 .search-bar{
   display: flex;
   background-color: white;
-  width: 35%;
+  width: 65%;
   border-radius: 24px;
   overflow: hidden;
   align-items: center;
@@ -30,7 +30,7 @@ body#pages-home{
     align-items: center;
     input {
       background: transparent;
-      height: 48px;
+      height: 40px;
       padding: 0 16px;
       align-items: center;
       border: none;

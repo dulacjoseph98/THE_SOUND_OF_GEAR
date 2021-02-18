@@ -2,10 +2,7 @@ class ReservationsController < ApplicationController
   def index
     @reservations = Reservation.all
   end
-  def new
-    @reservation = Reservation.new
-    authorize @reservation
-  end
+  
   def create
     @reservation = Reservation.new(reservation_params)
     authorize @reservation

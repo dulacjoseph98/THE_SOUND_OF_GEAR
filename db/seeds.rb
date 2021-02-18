@@ -11,6 +11,7 @@ Reservation.destroy_all
 Device.destroy_all
 User.destroy_all
 
+
 guillaume = User.new(name: "Guillaume", password: "123456", email: "guillaume@lewagon.org")
 guillaume.save!
 
