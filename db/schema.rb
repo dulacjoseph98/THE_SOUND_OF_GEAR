@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_160547) do
     t.float "latitude"
     t.float "longitude"
     t.text "description"
+    t.integer "rating"
     t.index ["user_id"], name: "index_devices_on_user_id"
   end
 
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_160547) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
     t.index ["device_id"], name: "index_reservations_on_device_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
