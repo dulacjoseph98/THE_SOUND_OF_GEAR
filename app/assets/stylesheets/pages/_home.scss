@@ -7,7 +7,7 @@ body#pages-home{
   background-image: image-url("test3.jpg");
   background-size: cover;
   background-position: center;
-  object-fit: cover;
+  // background-repeat: no-repeat;
 }
 
 
@@ -51,6 +51,7 @@ body#pages-home{
     button.search-icon:hover {
       border-radius: 50%;
       background: black;
+      opacity: 0.75;
 
       i {
         color: white;
