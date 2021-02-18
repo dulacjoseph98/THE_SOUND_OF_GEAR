@@ -21,7 +21,7 @@ class DevicesController < ApplicationController
     end
 
     if @device_name == "All the results for "
-      @device_name = "All the Devices"
+      @device_name = "All the devices"
     end
 
     @markers = @devices.geocoded.map do |device|

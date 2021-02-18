@@ -3,8 +3,7 @@
 }
 
 body#devices-index{
-  background-color: #3e5c76;
-  // #3b5369d6
+  background-color: #323233;
 }
 
 .navbar {
@@ -17,7 +16,7 @@ body#devices-index{
 }
 
 #otis a {
-  color: #333333;
+  color: #f2fcff;
   text-decoration: none;
   a:hover {
     color: white;
@@ -28,7 +27,7 @@ body#devices-index{
   list-style: none;
   overflow: hidden;
   height: 150px;
-  background: white;
+  background-color: #606567;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -46,12 +45,11 @@ li {
   border-radius: 12px;
   margin: 15px;
   margin-top: 0;
-  background: white;
   h1{
     padding-top: 15px;
     text-align: center;
-    color: #323233;
-    font-family: "Circular Medium";
+    color: #f2fcff;
+    font-family: "Circular Medium" sans-serif;
   }
   // li {
   //   border-radius: 12px;
@@ -86,10 +84,33 @@ li {
 
 .device_category {
   padding-left: 20px;
+
+  &.speakers {
+    i {
+      background: #a4ebff;
+    }
+  }
+
+
+  &.microphone {
+    i {
+      background: #ff9090;
+      color: maroon;
+    }
+  }
+
+  i {
+    justify-content: end;
+    padding: 4px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #045b74;
+  }
 }
 
 .device_name {
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 
