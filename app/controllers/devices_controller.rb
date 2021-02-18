@@ -28,7 +28,8 @@ class DevicesController < ApplicationController
       {
         lat: device.latitude,
         lng: device.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { device: device })
+        infoWindow: render_to_string(partial: "info_window", locals: { device: device }),
+        image_url: helpers.asset_url('logo')
       }
     end
   end
@@ -68,6 +69,6 @@ class DevicesController < ApplicationController
   private
 
   def device_params
-    params.require(:device).permit(:name, :category, :photo, :address)
+    params.require(:device).permit(:name, :category, :photo, :address, :description)
   end
 end

@@ -7,6 +7,7 @@ body#pages-home{
   background-image: image-url("test3.jpg");
   background-size: cover;
   background-position: center;
+  object-fit: cover;
 }
 
 
@@ -71,7 +72,8 @@ body#pages-home{
 h3#rent {
 color: white;
 font-family: 'Sansita Swashed', cursive;
-padding-bottom: 30px;
+// text-shadow: 1px 1px 5px rgb(43 10 10);
+padding-bottom: 15px;
 }
 
 
