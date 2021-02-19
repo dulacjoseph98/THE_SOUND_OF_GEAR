@@ -5,8 +5,10 @@
     <% if policy(Device).create? %>
         <h2 id="title"><%= @device.name %></h2>
         <p><%= @device.address %></p>
-        <h4>Description :</h4>
-        <p><%= @device.description.gsub(",", "<br>").html_safe %></p>
+        <% if @device.description.present? %>
+          <h4>Description :</h4>
+          <p><%= @device.description.gsub(",", "<br>").html_safe %></p>
+        <% end %>
         <hr>
         <% if @device.photo.attached? %>
           <%= cl_image_tag @device.photo.key, height: 300, crop: :fill, class: "img" %>
@@ -19,7 +21,7 @@
           <%= f.input :end_date, as: :date, html5: true %>
           <%= f.submit class: "button" %>
       <% end %>
-        
+
       <%#= form_for :reservation, url: device_reservations_path(@device.id), method: :post do |f| %>
         <%#= f.date_field :start_date, placeholder: "Start Date" , class: "form-date" %>
         <%# <br> %>
