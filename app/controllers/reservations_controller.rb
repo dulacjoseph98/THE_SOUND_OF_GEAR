@@ -1,6 +1,9 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    policy_scope(Device)
+    
+    @reservations = current_user.reservations
+    @resa_owner = current_user.devices.map {|device| device.reservations}
   end
   
   def create
