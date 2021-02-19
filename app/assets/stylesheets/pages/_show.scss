@@ -15,6 +15,7 @@ body#devices-show{
   background-color: white;
   border-radius: 25px;
   margin-top: 20vh;
+  box-shadow: 5px 5px 20px #3e3e3e;
 }
 
 .card-flex {
@@ -60,6 +61,8 @@ body#devices-show{
   border-radius: 20px;
   width: 100%;
   border: 0;
+  text-align: center;
+  padding: 6px 0;
 }
 
 button:hover {
