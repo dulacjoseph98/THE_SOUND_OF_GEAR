@@ -12,3 +12,68 @@
 //       padding-bottom: 40px;
 //     }
 // }
+body#devices-new{
+  background-image: image-url("test3.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.card-flex-add {
+  
+  justify-content: center;
+  width: 730px;
+  height: 620px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15rpx 1px black;
+  padding: 40px;
+
+  > div:first-of-type {
+    width: 60%;
+    img {
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+
+  > div:last-of-type {
+    width: 40%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+
+.btn-card {
+  display: flex;
+  flex-direction: column;
+
+  .button-add {
+    background-color: black;
+    opacity: 0.80;
+    color: white;
+    margin: 15px 0;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 25%;
+    border: 0;
+  
+  }
+  #back {
+    opacity: 0.2;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  #back:hover {
+    
+    opacity: 0.5;
+  }
+  button-add:hover {
+    background-color: grey;
+    opacity: 0.80;
+  }
+}
