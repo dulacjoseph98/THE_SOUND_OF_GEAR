@@ -60,6 +60,25 @@ body#pages-home{
   }
 }
 
+.dropd {
+  opacity: 0.75;
+  background: transparent;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border: none;
+  flex-grow: 1;
+  border-radius: 24px;
+  &:focus,
+  &:hover {
+    outline: 0;
+    background: #f3f3f3;
+    + span {
+      opacity: 0;
+    }
+  }
+}
+
 .search-icon {
   background: transparent;
   height: 48px;

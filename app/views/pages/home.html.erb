@@ -7,7 +7,7 @@
     <span></span>
     <%= text_field_tag :address, params[:address], placeholder: 'Address' %>
     <span></span>
-    <%= text_field_tag :category, params[:category], placeholder: 'Category' %>
+    <%= select_tag :category, options_for_select(Device::CATEGORIES), prompt: "Category", class: "dropd" %>
     <span></span>
     <%= button_tag type: :submit, class: "search-icon" do %><i class="fas fa-search-location"></i><% end %>
   <% end %>
