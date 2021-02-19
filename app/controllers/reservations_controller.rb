@@ -12,10 +12,11 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to device_reservation_path(@device, @reservation)
     else
-      render :new
+      render "devices/show"
     end
   end
   def show
+    @device = Device.find(params[:device_id])
     @reservation = Reservation.find(params[:id])
     authorize @reservation
   end
