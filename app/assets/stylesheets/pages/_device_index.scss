@@ -11,6 +11,10 @@ body#devices-index .navbar {
     border-bottom: 1px solid #f2fcff;
 }
 
+body#devices-index .footer {
+  background: #323233;
+}
+
 .flexy {
   padding-left: 0px;
   padding-bottom: 3px;
@@ -50,12 +54,16 @@ li {
     padding-top: 15px;
     text-align: center;
     color: #f2fcff;
-    font-family: "Circular Medium" sans-serif;
+    // font-family: "Circular Medium" sans-serif;
   }
   // li {
   //   border-radius: 12px;
   // }
 
+  .device_name {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .devindex {
@@ -122,10 +130,7 @@ li {
   }
 }
 
-.device_name {
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
+
 
 
 // Smallest device
