@@ -10,24 +10,6 @@ body#reservations-index{
   // background-repeat: no-repeat;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  width: 730px;
-  height: 420px;
-  border-radius: 25px;
-  box-shadow: 5px 5px 15rpx 1px black;
-  padding: 40px;
-}
-
-.card {
-  justify-content: center;
-  width: 70px;
-  height: 42px;
-  border-radius: 25px;
-  box-shadow: 5px 5px 15px 1px black;
-  padding: 20px;
-}
 
 .resa-card-dashboard {
   background-color: white;
@@ -35,4 +17,5 @@ body#reservations-index{
   width: 50%;
   margin: 0 auto;
   margin-bottom: 35px;
+  margin-top: 20vh;
 }
