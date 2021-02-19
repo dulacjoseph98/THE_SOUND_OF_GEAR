@@ -32,10 +32,12 @@ city = ["75001", "78125", "92130", "75012", "56250", "56340"]
 speakers_devices = [["Yamaha HS7", 20, "https://medias.audiofanzine.com/images/normal/yamaha-hs7-3223795.jpg"],
                     ["Focal Twin 6", 50, "https://res.cloudinary.com/dxr1rv4wx/image/upload/v1613732027/focaltwin_xznwov.jpg"],
                     ["Genelec 8030 CP", 30, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYx08WFQ2LAAUQEN8gjdGlc_PxfhOhCrAAw&usqp=CAU"]]
+
+speakers_description = "Speaker 6.5 cone woofer (60W) + 1 dome tweeter (35W), 3- and 2-way monitor in one, Balanced 6.3 mm jack input"
 3.times do
   speakers = speakers_devices.sample
   file = URI.open(speakers.last)
-  speaker_device = Device.create!(user: users.sample, name: speakers.first, price: speakers[1], category: "speakers", address: city.sample)
+  speaker_device = Device.create!(user: users.sample, name: speakers.first, price: speakers[1], description: speakers_description, category: "speakers", address: city.sample)
   speaker_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
   speaker_device.save!
 end
@@ -68,10 +70,13 @@ end
 microphone_devices = [["Neumann U87", 30, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRX2UvbNeH2TH3VrMOs8wBdP1TEJlrN-L5oQ&usqp=CAU"],
                       ["Neumann KM184", 20, "https://funkyjunkfrance.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/e/neumann-km-184-mt.jpg"],
                       ["Beyer M88 TG", 10, "https://cdn.brianli.com/uploads/2020/04/20200404_BEYERDYNAMIC-M88.jpg"]]
+
+microphone_description = "The U 87 is equipped with a large dual-diaphragm capsule, Three directional patterns: omnidirectional, Cardioid and figure-8, These are selectable with a switch below the headgrille"
+
 3.times do
   micro = microphone_devices.sample
   file = URI.open(micro.last)
-  micro_device = Device.create!(user: users.sample, name: micro.first, price: micro[1], category: "microphone", address: city.sample)
+  micro_device = Device.create!(user: users.sample, name: micro.first, price: micro[1], description: microphone_description, category: "microphone", address: city.sample)
   micro_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
   micro_device.save!
 end

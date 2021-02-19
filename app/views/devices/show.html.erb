@@ -5,7 +5,8 @@
     <% if policy(Device).create? %>
         <h2 id="title"><%= @device.name %></h2>
         <p><%= @device.address %></p>
-        <p><%= @device.description %>  </p>
+        <h4>Description :</h4>
+        <p><%= @device.description.gsub(",", "<br>").html_safe %></p>
         <hr>
         <% if @device.photo.attached? %>
           <%= cl_image_tag @device.photo.key, height: 300, crop: :fill, class: "img" %>
