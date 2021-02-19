@@ -8,6 +8,7 @@ body#devices-index{
 
 body#devices-index .navbar {
     background: #323233;
+    border-bottom: 1px solid #f2fcff;
 }
 
 .flexy {
@@ -91,6 +92,19 @@ li {
     }
   }
 
+  &.soundcard {
+    i {
+      background: #65d065;
+      color: #185418;
+    }
+  }
+
+  &.keyboard {
+    i {
+      background: #f1ffa4;
+      color: #806a00;
+    }
+  }
 
   &.microphone {
     i {
