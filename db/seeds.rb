@@ -21,32 +21,59 @@ gabriel.save!
 nasser = User.new(name: "Nasser", password: "123456", email: "nasser@lewagon.org")
 nasser.save!
 
+john = User.new(name: "John", password: "123456", email: "jlennon@gmail.com")
+john.save!
 
 
-users = [guillaume, gabriel, nasser]
+users = [guillaume, gabriel, nasser, john]
 city = ["75001", "78125", "92130", "75012", "56250", "56340"]
 
-speakers_devices = ["Yamaha HS7", "Focal Twin 6", "Genelec 8030 CP"]
+
+speakers_devices = [["Yamaha HS7", "https://medias.audiofanzine.com/images/normal/yamaha-hs7-3223795.jpg"],
+                    ["Focal Twin 6", "https://res.cloudinary.com/dxr1rv4wx/image/upload/v1613732027/focaltwin_xznwov.jpg"],
+                    ["Genelec 8030 CP", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYx08WFQ2LAAUQEN8gjdGlc_PxfhOhCrAAw&usqp=CAU"]]
 3.times do
-  file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
-  first_device = Device.new(user: users.sample, name: speakers_devices.sample, category: "speakers", address: city.sample)
-  first_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
-  first_device.save!
+  speakers = speakers_devices.sample
+  file = URI.open(speakers.last)
+  speaker_device = Device.create!(user: users.sample, name: speakers.first, category: "speakers", address: city.sample)
+  speaker_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
+  speaker_device.save!
 end
 
-synthetiseur_devices = ["Moog Voyager", "Roland Jupiter X", "Behringer Poly D"]
+
+synthetiseur_devices = [["Moog Voyager", "https://img.audiofanzine.com/images/u/product/normal/moog-music-minimoog-voyager-select-series-161415.jpg"],
+                        ["Roland Jupiter X", "https://i2.wp.com/www.gearjunkies.com/wp-content/uploads/2020/01/roland-zen-core-e1579115688887.png?resize=436%2C291"],
+                        ["Behringer Poly D", "https://www.acclaim-music.com/product-images/h420/live/images/D/28962_behringer_polyd_BEHRINGER-POLYD-ACCLAIM-DI9.jpg"]]
 3.times do
-  Device.create!(user: users.sample, name: synthetiseur_devices.sample, category: "keyboard", address: city.sample)
+  synth = synthetiseur_devices.sample
+  file = URI.open(synth.last)
+  synth_device = Device.create!(user: users.sample, name: synth.first, category: "keyboard", address: city.sample)
+  synth_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
+  synth_device.save!
 end
 
-soundcard_devices = ["Apollo Twin", "Focusrite Scarlett", "Antelop Zen Go"]
+
+soundcard_devices = [["Apollo Twin", "https://media.uaudio.com/assetlibrary/a/p/apollo_twin_x_hero.jpg"],
+                     ["Focusrite Scarlett", "https://i5.walmartimages.com/asr/af200329-24ee-40f8-9a80-1a04d9098253_1.58c10b2dcc76299c620882da9b7fab79.jpeg"],
+                     ["Antelop Zen Go", "https://i0.wp.com/musiccenter.pl/wp-content/uploads/2021/01/DSC00972.jpg?fit=1700%2C957&ssl=1"]]
 3.times do
-  Device.create!(user: users.sample, name: soundcard_devices.sample, category: "soundcard", address: city.sample)
+  soundcard = soundcard_devices.sample
+  file = URI.open(soundcard.last)
+  soundcard_device = Device.create!(user: users.sample, name: soundcard.first, category: "soundcard", address: city.sample)
+  soundcard_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
+  soundcard_device.save!
 end
 
-microphone_devices = ["Neumann U87", "Neumann KM184", "Beyer M88 TG"]
+
+microphone_devices = [["Neumann U87", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRX2UvbNeH2TH3VrMOs8wBdP1TEJlrN-L5oQ&usqp=CAU"],
+                      ["Neumann KM184", "https://funkyjunkfrance.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/e/neumann-km-184-mt.jpg"],
+                      ["Beyer M88 TG", "https://cdn.brianli.com/uploads/2020/04/20200404_BEYERDYNAMIC-M88.jpg"]]
 3.times do
-  Device.create!(user: users.sample, name: microphone_devices.sample, category: "microphone", address: city.sample)
+  micro = microphone_devices.sample
+  file = URI.open(micro.last)
+  micro_device = Device.create!(user: users.sample, name: micro.first, category: "microphone", address: city.sample)
+  micro_device.photo.attach(io: file, filename: 'device.png', content_type: 'image/png')
+  micro_device.save!
 end
 
 
