@@ -1,4 +1,5 @@
 class Device < ApplicationRecord
+  CATEGORIES = ["speakers", "microphone", "keyboard", "sound-card"]
   belongs_to :user
   has_many :reservations
   validates :name, presence: true
