@@ -1,5 +1,9 @@
-<h2><%= link_to device.name, device_path(device) %></h3>
+<%= link_to device_path(device) do %>
+  <div class="popup-container">
+    <h3><%= device.name %></h3>
 
-<% if device.photo.attached? %>
-  <%= cl_image_tag device.photo.key, height: 120, width: 160, crop: :fill %>
+    <% if device.photo.attached? %>
+      <%= cl_image_tag device.photo.key, height: 120, width: 160, crop: :fill %>
+    <% end %>
+  </div>
 <% end %>

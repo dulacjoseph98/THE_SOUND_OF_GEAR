@@ -38,6 +38,82 @@ body#devices-index .footer {
   display: flex;
   align-items: center;
   margin: 7%;
+  // transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .device-infos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    .device_name {
+      // padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      letter-spacing: 0.25px;
+    }
+
+    .device_price {
+      // padding-left: 20px;
+      margin-bottom: 5px;
+      font-size: 12px;
+      margin-left: auto;
+
+      span {
+        width: auto;
+        height: auto;
+        background: none;
+        font-size: 30px;
+        font-weight: 800;
+      }
+    }
+
+
+
+    .device_category {
+      // padding-left: 20px;
+      padding-bottom: 15px;
+
+      &.speakers {
+        i {
+          background: #a4ebff;
+        }
+      }
+
+      &.soundcard {
+        i {
+          background: #65d065;
+          color: #185418;
+        }
+      }
+
+      &.keyboard {
+        i {
+          background: #f1ffa4;
+          color: #806a00;
+        }
+      }
+
+      &.microphone {
+        i {
+          background: #ff9090;
+          color: maroon;
+        }
+      }
+
+      i {
+        justify-content: end;
+        padding: 4px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        color: #045b74;
+      }
+    }
+  }
 }
 
 li {
@@ -60,10 +136,6 @@ li {
   //   border-radius: 12px;
   // }
 
-  .device_name {
-    padding-left: 20px;
-    margin-bottom: 10px;
-  }
 }
 
 .devindex {
@@ -90,46 +162,6 @@ li {
 .img-fit {
   object-fit: cover;
 }
-
-.device_category {
-  padding-left: 20px;
-
-  &.speakers {
-    i {
-      background: #a4ebff;
-    }
-  }
-
-  &.soundcard {
-    i {
-      background: #65d065;
-      color: #185418;
-    }
-  }
-
-  &.keyboard {
-    i {
-      background: #f1ffa4;
-      color: #806a00;
-    }
-  }
-
-  &.microphone {
-    i {
-      background: #ff9090;
-      color: maroon;
-    }
-  }
-
-  i {
-    justify-content: end;
-    padding: 4px 16px;
-    border-radius: 50px;
-    font-size: 12px;
-    color: #045b74;
-  }
-}
-
 
 
 

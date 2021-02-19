@@ -7,15 +7,15 @@
               <% @devices.each do |device| %>
                 <%= link_to device_path(device) do  %>
                   <li>
-                    <div class="">
-                      <div class="device_name">
-                        <b><%= device.name %></b>
-                        <br>
-                      </div>
+                    <div class="device-infos">
 
+                      <p class="device_name"><%= device.name %></p>
                       <div class="device_category <%= device.category %>">
                         <i><%= device.category %></i>
                       </div>
+
+                      <p class="device_price"><span><%= device.price %></span>€ / day</p>
+
                     </div>
 
                     <div class="device_photo">
