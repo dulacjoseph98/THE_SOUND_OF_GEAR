@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :devices, only: [:index, :show, :new, :create, :destroy] do 
    resources :reservations, only: [:show, :create]
   end
+  resources :reservations, only: [:index]
 end
