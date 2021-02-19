@@ -1,6 +1,15 @@
-<h1>Votre Reservation est confirmee !</h1>
-
-<h1><%= @reservation.device.name %></h1>
-<h1><%= @reservation.start_date %></h1>
-<h1><%= @reservation.end_date %></h1>
-<%= link_to "Return To Devices", devices_path %>
+<div class="container">
+<div class="resa-card">
+  <div class="card">
+    <h1>Reservation Confirmed 🎹</h1>
+    <hr>
+    <h2 id="pdt">Product: <%= @reservation.device.name %></h2>
+    <hr>
+    <h4 class="date">Start Date: <%= @reservation.start_date.strftime("%b %d, %Y ") %></h3>
+    <hr>
+    <h4 class="date">End Date: <%= @reservation.end_date.strftime("%b %d, %Y ") %></h3>
+  <%= link_to "Return To Devices", devices_path, class: "btn_back" %>
+    
+  </div>
+</div>
+</div>

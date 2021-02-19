@@ -36,12 +36,12 @@ end
 
 synthetiseur_devices = ["Moog Voyager", "Roland Jupiter X", "Behringer Poly D"]
 3.times do
-  Device.create!(user: users.sample, name: synthetiseur_devices.sample, category: "synthetiseur", address: city.sample)
+  Device.create!(user: users.sample, name: synthetiseur_devices.sample, category: "keyboard", address: city.sample)
 end
 
 soundcard_devices = ["Apollo Twin", "Focusrite Scarlett", "Antelop Zen Go"]
 3.times do
-  Device.create!(user: users.sample, name: soundcard_devices.sample, category: "carte son", address: city.sample)
+  Device.create!(user: users.sample, name: soundcard_devices.sample, category: "soundcard", address: city.sample)
 end
 
 microphone_devices = ["Neumann U87", "Neumann KM184", "Beyer M88 TG"]

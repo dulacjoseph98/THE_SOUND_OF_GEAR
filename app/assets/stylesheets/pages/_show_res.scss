@@ -1,0 +1,47 @@
+body#reservations-show{
+  background-image: image-url("test3.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  // background-repeat: no-repeat;
+}
+
+// .navbar {
+// background: transparent;
+// }
+
+.card {
+  justify-content: center;
+  width: 730px;
+  height: 420px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15rpx 1px black;
+  padding: 40px;
+}
+
+.btn_back {
+  background-color: black;
+  opacity: 0.80;
+  color: white;
+  margin: 15px 0;
+  justify-content: center;
+  border-radius: 20px;
+  width: 25%;
+  padding: 5px 10px;
+  border: 0;
+}
+
+.btn_back:hover {
+  color: white;
+  background-color: black;
+  opacity: 0.60;
+  text-decoration: none;
+}
+
+.date {
+  color: grey;
+}
+
+h2#pdt {
+  color: grey;
+}

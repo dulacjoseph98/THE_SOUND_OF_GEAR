@@ -7,7 +7,7 @@ body#pages-home{
   background-image: image-url("test3.jpg");
   background-size: cover;
   background-position: center;
-  object-fit: cover;
+  // background-repeat: no-repeat;
 }
 
 
@@ -51,6 +51,7 @@ body#pages-home{
     button.search-icon:hover {
       border-radius: 50%;
       background: black;
+      opacity: 0.75;
 
       i {
         color: white;
@@ -72,8 +73,8 @@ body#pages-home{
 h3#rent {
 color: white;
 font-family: 'Sansita Swashed', cursive;
-// text-shadow: 1px 1px 5px rgb(43 10 10);
 padding-bottom: 15px;
+text-shadow: 1px 1px 7px black;
 }
 
 
@@ -126,7 +127,7 @@ span {
 #pages-home .custom-container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 120px);
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
