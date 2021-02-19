@@ -1,0 +1,20 @@
+<div class="container-resa">
+  <div class="resa-card-dashboard">
+    <ul>
+      <% @reservations.each do |resa| %>
+        <li> <%= p resa.start_date.strftime("%b %d, %Y ") %></li>
+        <li> <%= p resa.end_date.strftime("%b %d, %Y ") %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="resa-card-dashboard mt-0">
+    <% @resa_owner.map do |resa| %>
+      <ul>
+        <% resa.map do |el| %>
+          <li><%= el.start_date.strftime("%b %d, %Y ") %></li>
+        <%end%>
+      </ul>
+    <% end %>
+  </div>
+</div>
