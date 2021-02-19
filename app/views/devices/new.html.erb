@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="resa-card">
+  <div class="resa-card adding-d">
     <div class="card-flex-add">
       <h1>Add a device</h1>
       <%= simple_form_for(@device) do |f| %>
@@ -7,6 +7,7 @@
       <%= f.input :address %>
       <%= f.input :photo, as: :file %>
       <%= f.input :description %>
+      <%= f.input :price %>
       <%= p "Category :" %>
       <%= f.select :category, ['Choose a category', 'Soundcard', 'Synthesizer', 'Microphone', 'Speakers']%>
       <br>
